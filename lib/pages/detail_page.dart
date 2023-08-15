@@ -24,7 +24,7 @@ class _DetailPageState extends State<DetailPage> {
       builder: ((context, state) {
         DetailState detail = state as DetailState;
         return Scaffold(
-          body: Container(
+          body: SizedBox(
             height: double.maxFinite,
             width: double.maxFinite,
             child: Stack(
@@ -38,8 +38,7 @@ class _DetailPageState extends State<DetailPage> {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                            "http://mark.bslmeiyu.com/uploads/" +
-                                detail.place.img),
+                            "http://mark.bslmeiyu.com/uploads/${detail.place.img}"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -98,7 +97,7 @@ class _DetailPageState extends State<DetailPage> {
                                 size: 35,
                               ),
                               LargeText(
-                                text: "\$" + detail.place.price.toString(),
+                                text: "\$${detail.place.price}",
                                 color: AppColors.mainColor,
                                 size: 35,
                               ),
@@ -227,10 +226,10 @@ class _DetailPageState extends State<DetailPage> {
                         icon: Icons.favorite,
                         isIcon: true,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
-                      ResBut(
+                      const ResBut(
                         isRes: true,
                       )
                     ],

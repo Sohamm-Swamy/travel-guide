@@ -35,7 +35,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     // ignore: prefer_interpolation_to_compose_strings
                     image: AssetImage(
                         // ignore: prefer_interpolation_to_compose_strings
-                        "img/" + images[index]),
+                        "assets/img/" + images[index]),
                     fit: BoxFit.cover),
               ),
               child: Container(
@@ -68,11 +68,11 @@ class _WelcomePageState extends State<WelcomePage> {
                           onTap: () {
                             BlocProvider.of<Cubits>(context).getData();
                           },
-                          child: Container(
+                          child: const SizedBox(
                             width: 120,
                             child: Row(
                               children: [
-                                const ResBut(
+                                ResBut(
                                   width: 100,
                                 ),
                               ],

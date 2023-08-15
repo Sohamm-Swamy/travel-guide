@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:master_class_booking/cubit/cubit_states.dart';
 import 'package:master_class_booking/cubit/cubits.dart';
 import 'package:master_class_booking/pages/detail_page.dart';
-import 'package:master_class_booking/pages/home_page.dart';
 import 'package:master_class_booking/pages/navpages/main_page.dart';
 import 'package:master_class_booking/pages/welcome.dart';
 
@@ -21,16 +20,16 @@ class _CubitLogicsState extends State<CubitLogics> {
       body: BlocBuilder<Cubits, CubitStates>(
         builder: (context, state) {
           if (state is WelcomeState) {
-            return WelcomePage();
+            return const WelcomePage();
           }
           if (state is LoadedState) {
-            return MainPage();
+            return const MainPage();
           }
           if (state is DetailState) {
-            return DetailPage();
+            return const DetailPage();
           }
           if (state is LoadingState) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           } else {

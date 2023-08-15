@@ -172,7 +172,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                 color: Colors.white,
                                 image: DecorationImage(
                                     image: AssetImage(
-                                        "img/" + images.keys.elementAt(index)),
+                                        "assets/img/${images.keys.elementAt(index)}"),
                                     fit: BoxFit.cover),
                               ),
                             ),

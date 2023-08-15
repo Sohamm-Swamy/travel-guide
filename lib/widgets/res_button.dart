@@ -35,7 +35,7 @@ class ResBut extends StatelessWidget {
                     ),
                   )
                 : Container(),
-            Image.asset("img/button-one-removebg-preview.png")
+            Image.asset("assets/img/button-one-removebg-preview.png")
           ],
         ),
       ),
